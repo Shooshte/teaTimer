@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
 
 import '../../assets/styles/components/teaInfo.css';
-import '../../assets/styles/base/reusables.css';
 
 class TeaInfo extends Component {
   renderTeaInfo = (teaData) => {
     return teaData.map((teaType) => {
       return (
         <div className="tt-Card" key={teaType.id}>
-          <h1 className="tt-Header">{teaType.header}</h1>
-          {this.renderTeaText(teaType.text)}
-          <span className="tt-Label">Mild: {teaType.brewTime.mild}&nbsp;min.</span>
-          <span className="tt-Label">Strong: {teaType.brewTime.strong}&nbsp;min.</span>
+          <img className="tea-image" src={teaType.image} alt={teaType.header}/>
+          <h1 className="title">{teaType.header}<span className="subtitle">Brew Time:</span></h1>
+          <div className="label-container">
+            <span className="tt-Label">Mild: {teaType.brewTime.mild}&nbsp;min.</span>
+            <span className="tt-Label">Strong: {teaType.brewTime.strong}&nbsp;min.</span>
+          </div>
+          <div className="text">
+            {this.renderTeaText(teaType.text)}
+          </div>
         </div>
       )
     })
@@ -19,7 +23,7 @@ class TeaInfo extends Component {
 
   renderTeaText = (text) => {
     return text.map((paragraph, index) => {
-      return (<p className="tt-Text" key={index}>{paragraph}</p>)
+      return (<p key={index}>{paragraph}</p>)
     })
   };
 

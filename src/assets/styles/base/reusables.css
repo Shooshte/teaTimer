@@ -8,7 +8,23 @@ body a {
   margin: 8px;
   border-radius: 2px;
   min-width: 304px;
-  max-width: 466px; }
+  max-width: 466px;
+  font-family: 'Roboto', 'Noto', sans-serif;
+}
+
+.tt-card .title {
+  padding: 24px 16px 16px 16px;
+  font-size: 24px;
+}
+
+.tt-card .subtitle {
+  font-size: 14px;
+}
+
+.tt-card .text {
+  padding: 16px 16px 16px 24px;
+  font-size: 14px;
+}
 
 .tt-Button {
   background-color: #4caf50;
@@ -25,24 +41,6 @@ body a {
 
 .tt-Button:focus {
   outline: none; }
-
-.tt-Header,
-.tt-SubHeader,
-.tt-Text {
-  padding: 4px; }
-
-.tt-Header {
-  font-size: 20px;
-  font-weight: normal;
-  color: rgba(0, 0, 0, 0.87); }
-
-.tt-SubHeader {
-  font-size: 16px;
-  font-weight: normal;
-  color: rgba(0, 0, 0, 0.54); }
-
-.tt-Text {
-  color: rgba(0, 0, 0, 0.87); }
 
 .tt-Label {
   height: 16px;
