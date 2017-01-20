@@ -58,4 +58,6 @@ class Tea extends Component {
   }
 }
 
+//TODO write Tea component test
+
 export default Tea;

@@ -41,4 +41,6 @@ TeaInfo.propTypes = {
   teaData: React.PropTypes.array.isRequired
 };
 
+//TODO write TeaInfo component test
+
 export default TeaInfo;
