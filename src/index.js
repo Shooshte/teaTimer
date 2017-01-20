@@ -16,9 +16,9 @@ render(
   (<div>
       <Router history={hashHistory}>
         <Route component={Main} path="/">
-          <IndexRoute component={Landing}/>
+          <IndexRoute component={Tea}/>
           <Route component={About} path="/about"/>
-          <Route component={Tea} path="/tea"/>
+          <Route component={Landing} path="/timer"/>
         </Route>
         <Route component={NotFound} path="*"/>
       </Router>

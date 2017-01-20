@@ -2,7 +2,7 @@ body a {
   color: #af4cab;
   text-decoration: none; }
 
-.ttCard {
+.tt-Card {
   background-color: #fff;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.12);
   margin: 8px;
@@ -10,7 +10,7 @@ body a {
   min-width: 304px;
   max-width: 466px; }
 
-.ttButton {
+.tt-Button {
   background-color: #4caf50;
   font-family: 'Roboto', 'Noto', sans-serif;
   font-size: 14px;
@@ -23,28 +23,28 @@ body a {
   margin: 8px;
   border-radius: 2px; }
 
-.ttButton:focus {
+.tt-Button:focus {
   outline: none; }
 
-.ttHeader,
-.ttSubHeader,
-.ttText {
+.tt-Header,
+.tt-SubHeader,
+.tt-Text {
   padding: 4px; }
 
-.ttHeader {
+.tt-Header {
   font-size: 20px;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.87); }
 
-.ttSubHeader {
+.tt-SubHeader {
   font-size: 16px;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.54); }
 
-.ttText {
+.tt-Text {
   color: rgba(0, 0, 0, 0.87); }
 
-.ttLabel {
+.tt-Label {
   height: 16px;
   padding: 8px 12px;
   font-size: 14px;
@@ -53,5 +53,3 @@ body a {
   border-radius: 20px;
   display: inline-block;
   margin: 4px; }
-
-/*# sourceMappingURL=reusables.css.map */

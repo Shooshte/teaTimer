@@ -26,9 +26,7 @@ describe('<Navigation/>', () => {
     expect(navigation.find('span').length).toBe(linksCount);
     expect(navigation.find(IndexLink).prop('to')).toBe('/');
     expect(navigation.find(Link).at(1).prop('to')).toBe('tea');
-
     expect(navigation.find('span').at(0).text()).toBe(links[0].text);
-
     expect(navigation.find('.' + links[0].icon).length).toBe(1);
     expect(navigation.find('.' + links[1].icon).length).toBe(1);
   });

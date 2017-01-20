@@ -11,12 +11,12 @@ class Main extends Component {
   render() {
     const LINKS = [
       {
-        to: '/',
+        to: 'timer',
         icon: 'mdi mdi-timer-sand-empty',
         text: 'Timer'
       },
       {
-        to: 'tea',
+        to: '/',
         icon: 'mdi mdi-coffee',
         text: 'Tea'
       },
