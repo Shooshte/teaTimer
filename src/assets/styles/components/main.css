@@ -1,0 +1,15 @@
+.tt-App-Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #4caf50;
+  font-family: "Roboto", "Noto", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.87); }
+
+.tt-Content-Container {
+  margin-bottom: 84px; }
+
+/*# sourceMappingURL=main.css.map */

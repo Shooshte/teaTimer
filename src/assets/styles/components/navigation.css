@@ -1,0 +1,42 @@
+.tt-Navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff; }
+
+.tt-Navbar-List {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0; }
+
+.tt-Navbar-Li {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 56px;
+  max-width: 82px;
+  height: 56px;
+  padding: 8px 12px 10px 12px; }
+
+.tt-Navbar-Link {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.87); }
+  .tt-Navbar-Link i,
+  .tt-Navbar-Link span {
+    display: block; }
+  .tt-Navbar-Link span {
+    margin-top: 4px;
+    font-size: 12px; }
+  .tt-Navbar-Link .mdi {
+    font-size: 24px; }
+
+.tt-Navbar-Active-Link {
+  color: #2e7d32; }
+  .tt-Navbar-Active-Link span {
+    font-size: 14px; }
+  .tt-Navbar-Active-Link i {
+    font-size: 28px; }
+
+/*# sourceMappingURL=navigation.css.map */
