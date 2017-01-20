@@ -12,23 +12,23 @@
   font-family: 'Roboto', 'Noto', sans-serif;
 }
 
-.title {
+.tt-Card .title {
   padding: 24px 16px 16px 16px;
   font-size: 24px;
 }
 
-.subtitle {
+.tt-Card .subtitle {
   display: block;
   font-size: 14px;
   color: rgba(0, 0, 0, .54);
 }
 
-.text {
+.tt-Card .text {
   padding: 16px 16px 24px 16px;
   font-size: 14px;
 }
 
-.label-container {
+.tt-Card .label-container {
   padding: 0 16px;
 }
 
