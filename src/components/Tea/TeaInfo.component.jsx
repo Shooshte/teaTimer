@@ -7,11 +7,15 @@ class TeaInfo extends Component {
     return teaData.map((teaType) => {
       return (
         <div className="tt-Card" key={teaType.id}>
-          <img className="tea-image" src={teaType.image} alt={teaType.header}/>
-          <h1 className="title">{teaType.header}<span className="subtitle">Brew Time:</span></h1>
-          <div className="label-container">
-            <span className="tt-Label">Mild: {teaType.brewTime.mild}&nbsp;min.</span>
-            <span className="tt-Label">Strong: {teaType.brewTime.strong}&nbsp;min.</span>
+          <div className="tt-media">
+            <img className="tea-image" src={teaType.image} alt={teaType.header}/>
+            <div className="tea-image-text">
+              <h1 className="title">{teaType.header}<span className="subtitle">Brew Time:</span></h1>
+              <div className="label-container">
+                <span className="tt-Label">Mild: {teaType.brewTime.mild}&nbsp;min.</span>
+                <span className="tt-Label">Strong: {teaType.brewTime.strong}&nbsp;min.</span>
+              </div>
+            </div>
           </div>
           <div className="text">
             {this.renderTeaText(teaType.text)}

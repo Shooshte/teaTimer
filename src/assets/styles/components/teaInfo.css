@@ -12,6 +12,28 @@
   font-family: 'Roboto', 'Noto', sans-serif;
 }
 
+.tt-Card:last-child {
+  margin-bottom: 0;
+}
+
+.tt-Card .tt-media {
+  position: relative;
+}
+
+.tt-media .tea-image-text {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .6);
+  padding-bottom: 8px;
+}
+
+.tt-Card .tt-media .subtitle {
+  color: rgba(251, 251, 251, .7);
+}
+
 .tt-Card .title {
   padding: 24px 16px 16px 16px;
   font-size: 24px;
