@@ -3,10 +3,10 @@ import shortid from 'shortid';
 
 import TeaInfo from './TeaInfo.component';
 
-import black from '../../assets/images/blacktea.jpeg';
-import white from '../../assets/images/whitetea.jpg';
-import oolong from '../../assets/images/oolongtea.jpg';
-import green from '../../assets/images/greentea.jpeg';
+import black from '../../assets/images/blacktea.png';
+import white from '../../assets/images/whitetea.png';
+import oolong from '../../assets/images/oolongtea.png';
+import green from '../../assets/images/greentea.png';
 
 class Tea extends Component {
   render() {

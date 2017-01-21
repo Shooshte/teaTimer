@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e7a949d-3abd-4ccb-8794-1a170ece2c10" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assets/styles/components/navigation.css" afterPath="$PROJECT_DIR$/src/assets/styles/components/navigation.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assets/styles/components/teaInfo.css" afterPath="$PROJECT_DIR$/src/assets/styles/components/teaInfo.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Tea/Tea.component.jsx" afterPath="$PROJECT_DIR$/src/components/Tea/Tea.component.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Tea/TeaInfo.component.jsx" afterPath="$PROJECT_DIR$/src/components/Tea/TeaInfo.component.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -24,11 +24,23 @@
     <splitter split-orientation="horizontal" split-proportion="0.5370957">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="TeaInfo.component.jsx" pinned="false" current-in-tab="true">
+          <file leaf-file-name="TeaInfo.component.jsx" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/Tea/TeaInfo.component.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="124">
-                  <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+                <state relative-caret-position="315">
+                  <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Tea.component.jsx" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/components/Tea/Tea.component.jsx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="360">
+                  <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -54,7 +66,7 @@
             <entry file="file://$PROJECT_DIR$/src/assets/styles/components/teaInfo.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="390">
-                  <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+                  <caret line="29" column="20" lean-forward="false" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
                   <folding />
                 </state>
               </provider>
@@ -92,11 +104,11 @@
       <list>
         <option value="$PROJECT_DIR$/src/assets/styles/base/reusables.css" />
         <option value="$PROJECT_DIR$/src/assets/styles/components/main.css" />
-        <option value="$PROJECT_DIR$/src/components/Tea/Tea.component.jsx" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/assets/styles/components/navigation.css" />
         <option value="$PROJECT_DIR$/src/components/Tea/TeaInfo.component.jsx" />
         <option value="$PROJECT_DIR$/src/assets/styles/components/teaInfo.css" />
+        <option value="$PROJECT_DIR$/src/components/Tea/Tea.component.jsx" />
       </list>
     </option>
   </component>
@@ -306,6 +318,10 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -396,12 +412,12 @@
       <option name="presentableId" value="Default" />
       <updated>1484934499165</updated>
       <workItem from="1484934500845" duration="2906000" />
-      <workItem from="1485007754449" duration="2309000" />
+      <workItem from="1485007754449" duration="3398000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5215000" />
+    <option name="totallyTimeSpent" value="6304000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -545,31 +561,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Tea/Tea.component.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/webpack.config.prod.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Tea/TeaInfo.component.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -589,11 +585,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Tea/TeaInfo.component.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/styles/components/teaInfo.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
-          <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+          <caret line="29" column="20" lean-forward="false" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Tea/Tea.component.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
