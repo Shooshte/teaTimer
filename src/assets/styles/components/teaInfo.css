@@ -10,8 +10,10 @@
   min-width: 304px;
   max-width: 466px;
   font-family: 'Roboto', 'Noto', sans-serif;
-  font-size: 0;
   flex-grow: 1;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
 }
 
 .tt-Card .tt-media {
