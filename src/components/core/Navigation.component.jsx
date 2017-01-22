@@ -39,6 +39,9 @@ class Navigation extends Component {
         <ul className="tt-Navbar-List">
           {this.renderLinks(LINKS)}
         </ul>
+        <div className="tt-Navbar-banner-container">
+          <div className="tt-Navbar-banner">Bleh</div>
+        </div>
       </div>
     )
   }

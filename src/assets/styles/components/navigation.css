@@ -36,10 +36,16 @@
 
 .tt-Navbar-Active-Link {
   color: #2e7d32; }
-  .tt-Navbar-Active-Link span {
-    font-size: 14px; }
-  .tt-Navbar-Active-Link i {
-    font-size: 28px; }
+.tt-Navbar-Active-Link span {
+  font-size: 14px;
+}
+.tt-Navbar-Active-Link i {
+  font-size: 28px;
+}
+
+.tt-Navbar-banner {
+  display: none;
+}
 
 @media only screen and (min-width: 768px) {
   .tt-Navbar {
@@ -50,7 +56,8 @@
     background-color: #fff;
     z-index: 1;
     display: flex;
-    align-content: center;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
   }
   .tt-Navbar-Li {
@@ -62,5 +69,20 @@
   }
   .tt-Navbar-Link span {
     margin-left: .25em;
+  }
+  .tt-Navbar-banner-container {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tt-Navbar-banner {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    display: inline-flex;
   }
 }
