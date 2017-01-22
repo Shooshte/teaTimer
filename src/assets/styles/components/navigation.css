@@ -50,6 +50,7 @@
 @media only screen and (min-width: 768px) {
   .tt-Navbar {
     position: fixed;
+    bottom: inherit;
     top: 0;
     left: 0;
     width: 23.79%;
@@ -57,15 +58,20 @@
     z-index: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
   }
   .tt-Navbar-Li {
-    display: block;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .tt-Navbar-Li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .tt-Navbar-Link i,
   .tt-Navbar-Link span {
-    display: inline-block;
+    display: inline-flex;
   }
   .tt-Navbar-Link span {
     margin-left: .25em;
