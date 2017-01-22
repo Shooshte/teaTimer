@@ -10,10 +10,8 @@
   min-width: 304px;
   max-width: 466px;
   font-family: 'Roboto', 'Noto', sans-serif;
-}
-
-.tt-Card:last-child {
-  margin-bottom: 0;
+  font-size: 0;
+  flex-grow: 1;
 }
 
 .tt-Card .tt-media {
@@ -63,4 +61,16 @@
   border-radius: 20px;
   display: inline-block;
   margin: 0 1em 0 0;
+}
+
+.tt-Card .text .teaInfo-p {
+  margin: .5em 0;
+}
+
+.tt-Card .text .teaInfo-p:first-child {
+  margin-top: 0;
+}
+
+.tt-Card .text .teaInfo-p:last-child {
+  margin-bottom: 0;
 }

@@ -30,7 +30,7 @@ class TeaInfo extends Component {
 
   renderTeaText = (text) => {
     return text.map((paragraph, index) => {
-      return (<p key={index}>{paragraph}</p>)
+      return (<p className="teaInfo-p" key={index}>{paragraph}</p>)
     })
   };
 
