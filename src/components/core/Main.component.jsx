@@ -29,9 +29,7 @@ class Main extends Component {
     return (
       <div className="tt-App-Container">
         <Navigation LINKS={LINKS}/>
-        <div className="tt-Content-Container">
           {this.props.children}
-        </div>
       </div>
     )
   }

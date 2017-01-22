@@ -2,15 +2,21 @@
 
 .tt-App-Container {
   display: flex;
-  align-items: center;
+  flex-flow: row wrap;
+  align-content: center;
   justify-content: center;
   min-height: 100vh;
   background-color: #4caf50;
   font-family: "Roboto", "Noto", sans-serif;
-  font-size: 14px;
+  font-size: 0;
   font-weight: normal;
-  color: rgba(0, 0, 0, 0.87); }
+  color: rgba(0, 0, 0, 0.87);
+  margin-bottom: 84px;
+}
 
-.tt-Content-Container {
-  margin-bottom: 84px; }
-
+@media only screen and (min-width: 768px) {
+  .tt-App-Container {
+    margin-bottom: 0px;
+    margin-left: 23.79%;
+  }
+}
