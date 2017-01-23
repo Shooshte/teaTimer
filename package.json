@@ -50,6 +50,7 @@
   },
   "dependencies": {
     "mdi": "^1.8.36",
+    "rc-slider": "^5.4.3",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-router": "^3.0.2",

@@ -6,7 +6,7 @@ import {hashHistory, Router, Route, IndexRoute} from 'react-router';
 import Main from './components/core/Main.component';
 import NotFound from './components/core/NotFound.component';
 import About from './components/About/About.component';
-import Landing from './components/Landing.component';
+import Timer from './components/Timer/Timer.component';
 import Tea from './components/Tea/Tea.component';
 
 //Stylesheets
@@ -18,7 +18,7 @@ render(
         <Route component={Main} path="/">
           <IndexRoute component={Tea}/>
           <Route component={About} path="/about"/>
-          <Route component={Landing} path="/timer"/>
+          <Route component={Timer} path="/timer"/>
         </Route>
         <Route component={NotFound} path="*"/>
       </Router>
