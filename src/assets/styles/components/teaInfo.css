@@ -2,6 +2,18 @@
   width: 100%;
 }
 
+.teaInfo {
+  flex: 1;
+}
+
+.tea-info-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+  flex-flow: row wrap;
+}
+
 .tt-Card {
   background-color: #fff;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.12);
@@ -10,9 +22,6 @@
   min-width: 304px;
   max-width: 466px;
   font-family: 'Roboto', 'Noto', sans-serif;
-  flex-grow: 1;
-  display: inline-block;
-  vertical-align: top;
   text-align: left;
 }
 

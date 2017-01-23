@@ -37,7 +37,7 @@ class TeaInfo extends Component {
   render() {
     const {teaData} = this.props;
     return(
-      <div>
+      <div className="tea-info-container">
         {this.renderTeaInfo(teaData)}
       </div>
     )

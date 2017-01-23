@@ -2,7 +2,6 @@
 
 .tt-App-Container {
   display: flex;
-  flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
   min-height: 100vh;
@@ -12,7 +11,6 @@
   font-weight: normal;
   color: rgba(0, 0, 0, 0.87);
   margin-bottom: 84px;
-  text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
