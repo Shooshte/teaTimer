@@ -1,18 +1,57 @@
 import React, { Component } from 'react';
 
+import aboutContent from './About.data';
+
+import '../../assets/styles/components/about.css';
+
 class About extends Component {
+
+  renderAbout = (aboutContent) => {
+    return(
+      <div className="tt-Card">
+        {aboutContent.map((section) => {
+          return (
+            <div className="about-section" key={section.id}>
+              <h1 className="title">
+                {section.heading}
+                <span className="subtitle">{section.subheading}</span>
+              </h1>
+              {this.renderTags(section.tags)}
+              {this.renderText(section.text)}
+            </div>);
+        })}
+      </div>
+    )
+  };
+
+  renderTags = (tags) => {
+    return (
+      <div className="label-container">
+        {tags.map((tag) => {
+          return (
+            <span className="tt-Label" key={tag}>{tag}</span>
+          )
+        })}
+      </div>
+    )
+  };
+
+  renderText = (text) => {
+    return (
+      <div className="text">
+        {text.map((paragraph, index) => {
+          return (
+            <p key={index}>{paragraph}</p>
+          )
+        })}
+      </div>
+    );
+  };
 
   render() {
     return(
-      <div>
-        <h1>Why?</h1>
-        <p>Just a hobby app to practice my ReactJS skill. There may be many like it, but this one is <a href="https://github.com/Shooshte" target="_blank">mine</a>.</p>
-        <h1>What with?</h1>
-        <p>ReactJS, webpack, google material design.</p>
-        <h1>Source?</h1>
-        <p>Feel free to fork, post issues and contribute on <a href="https://github.com/Shooshte/teaTimer" target="_blank">gitHub</a>.</p>
-      </div>
-    )
+      <div>{this.renderAbout(aboutContent)}</div>
+    );
   }
 }
 
