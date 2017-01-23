@@ -32,6 +32,11 @@
   padding: 0 16px;
 }
 
+/*Fix for parts without text*/
+.tt-Card .about-section:nth-child(2) .label-container {
+  margin-bottom: 1rem;
+}
+
 .tt-Label {
   height: 16px;
   padding: 8px 12px;
@@ -40,11 +45,17 @@
   background-color: #af4cab;
   border-radius: 20px;
   display: inline-block;
-  margin: 0 1em 0 0;
+  margin: 1rem;
+}
+
+.tt-Label a {
+  color: #c8e6c9;
+  text-decoration: none;
+
 }
 
 .tt-Card .text p {
-  margin: .5em 0;
+  margin: .5rem 0;
 }
 
 .tt-Card .text p:first-child {

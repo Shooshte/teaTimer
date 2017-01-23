@@ -63,6 +63,12 @@
   .tt-Navbar-Li {
     display: flex;
     justify-content: flex-start;
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+    margin: 0;
+    max-width: 400px;
+  }
+  .tt-Navbar-Li:last-child {
+    margin-bottom: 1rem;
   }
   .tt-Navbar-Li a {
     display: flex;

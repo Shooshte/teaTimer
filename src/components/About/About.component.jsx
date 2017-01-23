@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-
 import aboutContent from './About.data';
-
 import '../../assets/styles/components/about.css';
 
 class About extends Component {
@@ -25,27 +23,33 @@ class About extends Component {
   };
 
   renderTags = (tags) => {
-    return (
-      <div className="label-container">
-        {tags.map((tag) => {
-          return (
-            <span className="tt-Label" key={tag}>{tag}</span>
-          )
-        })}
-      </div>
-    )
+    if(tags) {
+      return (
+        <div className="label-container">
+          {tags.map((tag) => {
+            return (
+              <span className="tt-Label" key={tag.text}>
+              <a href={tag.href} target="_blank">{tag.text}</a>
+            </span>
+            )
+          })}
+        </div>
+      )
+    }
   };
 
   renderText = (text) => {
-    return (
-      <div className="text">
-        {text.map((paragraph, index) => {
-          return (
-            <p key={index}>{paragraph}</p>
-          )
-        })}
-      </div>
-    );
+    if(text) {
+      return (
+        <div className="text">
+          {text.map((part) => {
+            return (
+              <p key={part.id}>{part.paragraph}</p>
+            )
+          })}
+        </div>
+      );
+    }
   };
 
   render() {
