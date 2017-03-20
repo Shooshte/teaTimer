@@ -1,54 +1,59 @@
 import React, { Component } from 'react';
 import {Link, IndexLink} from 'react-router';
 
-// Icons
-import '../../../node_modules/mdi/css/materialdesignicons.min.css';
-
-// Stylesheets
-import '../../assets/styles/components/navigation.css';
+import '../../assets/styles/components/navigation.css'
 
 class Navigation extends Component {
+  linksData = [
+    {
+      icon: 'hourglass_empty',
+      to: '/timer',
+      text: 'Timer'
+    },
+    {
+      icon: 'local_cafe',
+      to: '/',
+      text: 'Tea'
+    },
+    {
+      icon: 'info',
+      to: '/about',
+      text: 'About'
+    }
+  ];
+
   renderLinks = (linksData) => {
-    return linksData.map((link) => {
-      if(link.to === '/') {
-        return (
-          <li className="tt-Navbar-Li" key={link.text}>
-            <IndexLink activeClassName="tt-Navbar-Active-Link" to={link.to} className="tt-Navbar-Link">
-              <i className={link.icon}></i>
-              <span>{link.text}</span>
+    return linksData.map((linkData) => {
+      if(linkData.to === '/') {
+        return(
+          <div className="navbar-link-container" key={linkData.to}>
+            <IndexLink activeClassName="navbar-active-link" to={linkData.to}>
+              <i className="navbar-icon material-icons">{linkData.icon}</i>
+              <span className="navbar-link-text">{linkData.text}</span>
             </IndexLink>
-          </li>
-        );
-      } else {
-        return (
-          <li className="tt-Navbar-Li" key={link.text}>
-            <Link activeClassName="tt-Navbar-Active-Link" to={link.to} className="tt-Navbar-Link">
-              <i className={link.icon}></i>
-              <span>{link.text}</span>
-            </Link>
-          </li>
-        );
+          </div>
+        )
       }
-    });
+      else {
+        return(
+          <div className="navbar-link-container" key={linkData.to}>
+            <Link activeClassName="navbar-active-link" to={linkData.to}>
+              <i className="navbar-icon material-icons">{linkData.icon}</i>
+              <span className="navbar-link-text">{linkData.text}</span>
+            </Link>
+          </div>
+        )
+      }
+    })
   };
 
   render() {
-    const {LINKS} = this.props;
-    return(
-      <div className="tt-Navbar">
-        <ul className="tt-Navbar-List">
-          {this.renderLinks(LINKS)}
-        </ul>
-        <div className="tt-Navbar-banner-container">
-          <div className="tt-Navbar-banner">Bleh</div>
-        </div>
+    return (
+      <div className={`navbar navbar-${this.linksData.length}`}>
+        {this.renderLinks(this.linksData)}
       </div>
     )
   }
-}
-
-Navigation.propTypes = {
-  LINKS: React.PropTypes.array.isRequired
 }
 
 export default Navigation;
