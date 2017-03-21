@@ -7,29 +7,19 @@ class Main extends Component {
 
   linksData = [
     {
-      icon: 'home',
+      icon: 'hourglass_empty',
+      to: '/timer',
+      text: 'Timer'
+    },
+    {
+      icon: 'local_cafe',
       to: '/',
-      text: 'Home motherlover'
+      text: 'Tea'
     },
     {
-      icon: 'filter_vintage',
-      to: '/route2',
-      text: 'Route2 motherlover'
-    },
-    {
-      icon: 'build',
-      to: '/route3',
-      text: 'Route3 motherlover'
-    },
-    {
-      icon: 'bookmark',
-      to: '/route4',
-      text: 'Route4 motherlover'
-    },
-    {
-      icon: 'email',
-      to: '/route5',
-      text: 'Route5 motherlover'
+      icon: 'info',
+      to: '/about',
+      text: 'About'
     }
   ];
 

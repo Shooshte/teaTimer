@@ -7,14 +7,15 @@ body {
 }
 
 .content-container {
-  margin-bottom: 56px;
-  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 64px;
 }
 
 .content-card {
   margin: 1rem;
   padding: 1rem;
-  background-color: lighten($second-color-mix, 8%);
   border-radius: 2px;
   box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.5);
 }
@@ -65,5 +66,15 @@ body {
 @media only screen and (min-width: 1024px) {
   .content-container {
     margin-top: 64px;
+  }
+  .view-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .content-card {
+    max-width: 456px;
   }
 }
