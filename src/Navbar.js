@@ -1,26 +1,9 @@
 import React, { Component } from 'react';
 import {Link, IndexLink} from 'react-router';
 
-import '../../assets/styles/components/navigation.css'
+import './navbar.css'
 
-class Navigation extends Component {
-  linksData = [
-    {
-      icon: 'hourglass_empty',
-      to: '/timer',
-      text: 'Timer'
-    },
-    {
-      icon: 'local_cafe',
-      to: '/',
-      text: 'Tea'
-    },
-    {
-      icon: 'info',
-      to: '/about',
-      text: 'About'
-    }
-  ];
+class Navbar extends Component {
 
   renderLinks = (linksData) => {
     return linksData.map((linkData) => {
@@ -49,11 +32,15 @@ class Navigation extends Component {
 
   render() {
     return (
-      <div className={`navbar navbar-${this.linksData.length}`}>
-        {this.renderLinks(this.linksData)}
+      <div className={`navbar navbar-${this.props.linksData.length}`}>
+        {this.renderLinks(this.props.linksData)}
       </div>
     )
   }
 }
 
-export default Navigation;
+Navbar.propTypes = {
+  linksData: React.PropTypes.array.isRequired,
+};
+
+export default Navbar;
