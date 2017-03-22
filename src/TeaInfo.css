@@ -2,6 +2,23 @@
   width: 100%;
 }
 
+.tea-image-container {
+  position: relative;
+  font-size: 0;
+}
+
+.tea-image-title {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  background-color: rgba(0, 0, 0, .5);
+  color: rgba(255, 255, 255, .9);
+  text-align: left;
+  width: 100%;
+  padding: 1rem 0;
+}
+
 .tea-info .content-card {
   padding: 0;
 }

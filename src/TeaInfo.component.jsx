@@ -7,8 +7,10 @@ class TeaInfo extends Component {
     return teaData.map((teaType) => {
       return (
         <div className="content-card" key={teaType.id}>
-          <img className="tea-image" src={teaType.image} alt={teaType.header}/>
-            <h1 className="title">{teaType.header}</h1>
+          <div className="tea-image-container">
+            <img className="tea-image" src={teaType.image} alt={teaType.header}/>
+            <h1 className="title tea-image-title">&nbsp;&nbsp;{teaType.header}</h1>
+          </div>
             <h3 className="subtitle">Brew Time:</h3>
             <div className="label-container">
               <span>Mild: {teaType.brewTime.mild}&nbsp;min.</span>
