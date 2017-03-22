@@ -11,11 +11,11 @@ class TeaInfo extends Component {
             <img className="tea-image" src={teaType.image} alt={teaType.header}/>
             <h1 className="title tea-image-title">&nbsp;&nbsp;{teaType.header}</h1>
           </div>
-            <h3 className="subtitle">Brew Time:</h3>
-            <div className="label-container">
-              <span>Mild: {teaType.brewTime.mild}&nbsp;min.</span>
-              <span>Strong: {teaType.brewTime.strong}&nbsp;min.</span>
-            </div>
+            <h3 className="title brew-time-title">Recommended brew time:</h3>
+          <div className="brew-time-text-container">
+            <button className="button brew-time-text">Mild: {teaType.brewTime.mild}&nbsp;min.</button>
+            <button className="button brew-time-text">Strong: {teaType.brewTime.strong}&nbsp;min.</button>
+          </div>
             <div className="tea-text-container">
               {this.renderTeaText(teaType.text)}
             </div>
