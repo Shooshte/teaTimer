@@ -1,7 +1,7 @@
-import black from './images/blacktea.png';
-import white from './images/whitetea.png';
-import oolong from './images/oolongtea.png';
-import green from './images/greentea.png';
+import black from '../images/blacktea.png';
+import white from '../images/whitetea.png';
+import oolong from '../images/oolongtea.png';
+import green from '../images/greentea.png';
 
 const TEA_DATA = [{
   id: 'wtid',

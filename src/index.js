@@ -5,9 +5,9 @@ import {hashHistory, Router, Route, IndexRoute} from 'react-router';
 import './reset.css';
 
 import Main from './Main';
-import Tea from './Tea.component';
+import Tea from './Tea/Tea.component';
 import Route2 from './Route2';
-import Route3 from './Route3';
+import Timer from './Timer/Timer.component';
 
 render(
   (<div>
@@ -15,7 +15,7 @@ render(
         <Route component={Main} path="/">
           <IndexRoute component={Tea}/>
           <Route component={Route2} path="/about"/>
-          <Route component={Route3} path="/timer"/>
+          <Route component={Timer} path="/timer"/>
         </Route>
       </Router>
     </div>
