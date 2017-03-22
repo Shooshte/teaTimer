@@ -45,10 +45,3 @@
 .tea-text-container {
   padding: 0 1rem;
 }
-
-@media only screen and (min-width: 1024px) {
-  .tea-image-title {
-    width: 100.5%;
-    left: -1px;
-  }
-}
