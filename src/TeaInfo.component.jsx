@@ -13,6 +13,7 @@ class TeaInfo extends Component {
           </div>
             <h3 className="title brew-time-title">Recommended brew time:</h3>
           <div className="brew-time-text-container">
+            {/*TODO link to timer route passing the time as a parameter*/}
             <button className="button brew-time-text">Mild: {teaType.brewTime.mild}&nbsp;min.</button>
             <button className="button brew-time-text">Strong: {teaType.brewTime.strong}&nbsp;min.</button>
           </div>
@@ -44,7 +45,5 @@ class TeaInfo extends Component {
 TeaInfo.propTypes = {
   teaData: React.PropTypes.array.isRequired
 };
-
-//TODO write TeaInfo component test
 
 export default TeaInfo;
