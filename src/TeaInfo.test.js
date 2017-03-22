@@ -50,11 +50,21 @@ describe('<TeaInfo/>', () => {
   });
 
   //Method tests
+  it('renderTeaInfo should return an array', () => {
+    const wrapper = shallow(<TeaInfo teaData={TeaData}/>);
+    const functReturn = wrapper.instance().renderTeaInfo(TeaData);
+    expect(functReturn.constructor === Array).toBe(true);
+  })
   it('renderTeaInfo should call renderTeaText', () => {
     const wrapper = mount(<TeaInfo teaData={TeaData}/>);
     let spy = sinon.spy(wrapper.instance(), 'renderTeaText');
     wrapper.update();
     expect(spy.called).toBe(true);
+  });
+  it('renderTeaText should return an array', () => {
+    const wrapper = shallow(<TeaInfo teaData={TeaData}/>);
+    const functReturn = wrapper.instance().renderTeaText(TeaData[0].text);
+    expect(functReturn.constructor === Array).toBe(true);
   });
   it('renderTeaText should return an array element for every text string', () => {
     const wrapper = shallow(<TeaInfo teaData={TeaData}/>);
