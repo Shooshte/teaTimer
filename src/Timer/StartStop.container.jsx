@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 
 class StartStop extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     onStatusChange(newStatus) {
         return () => {
@@ -16,14 +13,14 @@ class StartStop extends Component {
 
         let renderStartStopButton = () => {
             if(countdownStatus === 'started') {
-                return <button className="ttButton ttSSbtn" onClick={this.onStatusChange('stopped')}>RESET</button>;
+                return <button className="button" onClick={this.onStatusChange('stopped')}>RESET</button>;
             } else {
-                return <button className="ttButton ttSSbtn" onClick={this.onStatusChange('started')}>START</button>
+                return <button className="button" onClick={this.onStatusChange('started')}>START</button>
             }
         };
 
         return(
-            <div className="ttButtonContainer">
+            <div className="button-container">
                 {renderStartStopButton()}
             </div>
         )

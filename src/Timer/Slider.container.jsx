@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import './Slider.css';
+
 class Slider extends Component {
     constructor(props) {
         super(props);
@@ -24,22 +26,18 @@ class Slider extends Component {
     render() {
         return(
             <div>
-              <div className="ttSliderFrmCnt">
+              <div>
                 <form ref="form" className="ttSliderForm">
                     <input max="480" min="30" name="slider" onChange={this.handleSlider} ref="seconds" type="range" value={this.props.totalSeconds}/>
                 </form>
               </div>
-                <div className="ttSliderBtnsContainer">
-                  <div className="ttSliderBtnCnt">
-                    <button className="ttButton ttSliderBtn" onClick={() => {
+                <div className="button-container slider-buttons">
+                    <button className="button" onClick={() => {
                       this.handleButton(-30)
                     }}>-</button>
-                  </div>
-                  <div className="ttSliderBtnCnt">
-                    <button className="ttButton ttSliderBtn" onClick={() => {
+                    <button className="button" onClick={() => {
                         this.handleButton(+30)
                     }}>+</button>
-                  </div>
                 </div>
             </div>
         )

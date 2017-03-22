@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import Hourglass from './Hourglass.container';
 
-class Clock extends Component {
-    constructor(props) {
-        super(props);
-    }
+import './Clock.css';
 
+class Clock extends Component {
     formatSeconds(totalSeconds) {
         let seconds = totalSeconds % 60;
         let minutes = Math.floor(totalSeconds / 60);
@@ -21,7 +19,7 @@ class Clock extends Component {
     renderHourglass() {
         if(this.props.status === 'started') {
             return (
-                <div className="ttHourglassContainer">
+                <div className="hourglass-container">
                     <Hourglass/>
                 </div>
             );

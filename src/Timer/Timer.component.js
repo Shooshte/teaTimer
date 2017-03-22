@@ -28,6 +28,8 @@ class Timer extends Component {
           clearInterval(this.timer);
           delete this.timer;
           this.setState({count:180});
+          break;
+        default:
       }
     }
   }
@@ -86,9 +88,8 @@ class Timer extends Component {
       }
     };
     return(
-      <div className="ttCard">
-        <img className="ttTimerHeaderImg" src=""/>
-        <h1 className="ttHeader ttTeaTimerHeader">Tea timer</h1>
+      <div className="content-card">
+        <h1 className="title">Tea timer</h1>
         <Clock totalSeconds={count} status={countdownStatus}/>
         {renderStartStop()}
       </div>

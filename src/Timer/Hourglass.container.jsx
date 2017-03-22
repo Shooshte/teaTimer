@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './Hourglass.css';
+
 class Hourglass extends Component {
   render() {
     return(
