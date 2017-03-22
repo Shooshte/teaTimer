@@ -60,6 +60,10 @@ body {
   text-decoration: none;
 }
 
+.button:focus {
+  outline: none;
+}
+
 .content-container p {
   max-width: 75ch;
   margin: 0 auto;
