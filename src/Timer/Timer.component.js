@@ -20,6 +20,15 @@ class Timer extends Component {
     this.handleSliderInput = this.handleSliderInput.bind(this);
   }
 
+  componentDidMount() {
+    let seconds = parseInt(this.props.location.query.seconds, 10);
+
+    if (seconds && seconds > 0) {
+      this.setState({count:seconds});
+      window.location.hash = '#/timer';
+    }
+  }
+
   componentDidUpdate(prevProps, prevState) {
     if (this.state.countdownStatus !== prevState.countdownStatus) {
       switch (this.state.countdownStatus) {
@@ -29,7 +38,7 @@ class Timer extends Component {
         case 'stopped':
           clearInterval(this.timer);
           delete this.timer;
-          this.setState({count:180});
+          //this.setState({count:180});
           break;
         default:
       }

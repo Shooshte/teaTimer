@@ -6,7 +6,7 @@ class TeaInfo extends Component {
 
   redirectToTimer = (seconds) => {
     let encodedSeconds = encodeURIComponent(seconds);
-    window.location.hash = '#/timer?seconds' + encodedSeconds;
+    window.location.hash = '#/timer?seconds=' + encodedSeconds;
   }
 
   renderTeaInfo = (teaData) => {
