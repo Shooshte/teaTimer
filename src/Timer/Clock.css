@@ -12,6 +12,7 @@
   background-color: rgba(255, 255, 255, .8);
   padding: 0;
   margin: 0;
+  z-index: 300;
 }
 
 .hourglass-container {

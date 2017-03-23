@@ -5,61 +5,71 @@
   margin: 0 3rem 1rem 3rem;
   position: relative;
   overflow: hidden;
-  -webkit-animation: rotateGlass 4s infinite ease-in-out;
   display: block;
 }
 .spinner:before {
-   content: "";
-   width: 0;
-   height: 0;
-   display: block;
-   position: absolute;
-   z-index: 30;
-   border-top: 80px solid transparent;
-   border-bottom: 80px solid transparent;
-   border-left: 48px solid #E8EAF6;
- }
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  position: absolute;
+  z-index: 30;
+  border-top: 80px solid transparent;
+  border-bottom: 80px solid transparent;
+  border-left: 48px solid #E8EAF6;
+}
 .spinner:after {
-   content: "";
-   width: 0;
-   height: 0;
-   right: 0;
-   display: block;
-   position: absolute;
-   z-index: 30;
-   border-top: 80px solid transparent;
-   border-bottom: 80px solid transparent;
-   border-right: 48px solid #E8EAF6;
- }
+  content: "";
+  width: 0;
+  height: 0;
+  right: 0;
+  display: block;
+  position: absolute;
+  z-index: 30;
+  border-top: 80px solid transparent;
+  border-bottom: 80px solid transparent;
+  border-right: 48px solid #E8EAF6;
+}
 
 .sand:before {
-   content: "";
-   width: 196px;
-   background-color: #f0ca7d;
-   display: block;
-   position: absolute;
-   top: 0;
-   left: 0;
-   right: 0;
-   bottom: 50%;
-   /*-webkit-transform: scaleY(50%);*/
-   z-index: 10;
-   -webkit-animation: dropsand 4s infinite ease-in-out;
+  content: "";
+  width: 196px;
+  background-color: #f0ca7d;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
 }
 
 .sand:after {
-   content: "";
-   width: 0;
-   height: 0;
-   display: block;
-   position: absolute;
-   border-left: 0px solid transparent;
-   border-right: 196px solid transparent;
-   border-top: 280px solid rgba(255,255,255, 0.4);
-   z-index: 20;
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  position: absolute;
+  border-left: 0px solid transparent;
+  border-right: 196px solid transparent;
+  border-top: 280px solid rgba(255,255,255, 0.4);
+  z-index: 20;
 }
 
-/*.spinner {
+
+.spinner-started {
+  -webkit-animation: rotateGlass 4s infinite ease-in-out;
+}
+
+.sand-started:before {
+  top: 0;
+  bottom: 50%;
+   /*-webkit-transform: scaleY(50%);*/
+   -webkit-animation: dropsand 4s infinite ease-in-out;
+}
+
+
+/*.spinner-started {
   -webkit-animation: rotateplane 1.2s infinite ease-in-out;
 }*/
 @-webkit-keyframes dropsand {

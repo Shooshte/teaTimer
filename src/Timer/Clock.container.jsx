@@ -17,13 +17,11 @@ class Clock extends Component {
     }
 
     renderHourglass() {
-        if(this.props.status === 'started') {
             return (
                 <div className="hourglass-container">
-                    <Hourglass/>
+                    <Hourglass status={this.props.status}/>
                 </div>
             );
-        }
     }
 
     render() {
