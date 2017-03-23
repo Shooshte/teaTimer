@@ -4,14 +4,6 @@ import './Hourglass.css';
 
 class Hourglass extends Component {
 
-  // render() {
-  //   let {status} = this.props;
-  //   return(
-  //     <div>
-  //   {status === 'started' ? (<div className="spinner"><div className="sand"></div></div>) : null})
-  //     </div>
-  // }
-
   render() {
     let {status} = this.props;
       if(status === 'started') {
@@ -31,7 +23,6 @@ class Hourglass extends Component {
           </div>)
       }
   }
-
 }
 
 export default Hourglass;
