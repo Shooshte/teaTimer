@@ -29,10 +29,10 @@ class Clock extends Component {
     render() {
         let {totalSeconds} = this.props;
         return(
-            <div className="ttClockContainer">
+            <div className="clock-container">
                 {this.renderHourglass()}
                 <div>
-                    <span className="ttCLockText">
+                    <span className="clock-text title">
                         {this.formatSeconds(totalSeconds)}
                     </span>
                 </div>

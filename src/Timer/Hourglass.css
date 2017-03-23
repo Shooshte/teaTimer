@@ -1,8 +1,8 @@
 .spinner {
-  width: 28px;
-  height: 40px;
+  width: 112px;
+  height: 160px;
   background-color: #7de3f5;
-  margin: 8px 20px;
+  margin: 0 3rem 1rem 3rem;
   position: relative;
   overflow: hidden;
   -webkit-animation: rotateGlass 4s infinite ease-in-out;
@@ -15,9 +15,9 @@
    display: block;
    position: absolute;
    z-index: 30;
-   border-top: 20px solid transparent;
-   border-bottom: 20px solid transparent;
-   border-left: 12px solid #fff;
+   border-top: 80px solid transparent;
+   border-bottom: 80px solid transparent;
+   border-left: 48px solid #E8EAF6;
  }
 .spinner:after {
    content: "";
@@ -27,14 +27,14 @@
    display: block;
    position: absolute;
    z-index: 30;
-   border-top: 20px solid transparent;
-   border-bottom: 20px solid transparent;
-   border-right: 12px solid #fff;
+   border-top: 80px solid transparent;
+   border-bottom: 80px solid transparent;
+   border-right: 48px solid #E8EAF6;
  }
 
 .sand:before {
    content: "";
-   width: 49px;
+   width: 196px;
    background-color: #f0ca7d;
    display: block;
    position: absolute;
@@ -54,8 +54,8 @@
    display: block;
    position: absolute;
    border-left: 0px solid transparent;
-   border-right: 49px solid transparent;
-   border-top: 70px solid rgba(255,255,255, 0.4);
+   border-right: 196px solid transparent;
+   border-top: 280px solid rgba(255,255,255, 0.4);
    z-index: 20;
 }
 
