@@ -4,6 +4,8 @@ import Clock from './Clock.container';
 import StartStop from './StartStop.container';
 import MySlider from './Slider.container';
 
+import './Timer.css';
+
 class Timer extends Component {
   constructor(props) {
     super(props);
