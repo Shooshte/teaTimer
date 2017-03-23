@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
 
+import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
+
 import './Slider.css';
 
-class Slider extends Component {
+class MySlider extends Component {
     constructor(props) {
         super(props);
 
@@ -19,18 +22,25 @@ class Slider extends Component {
         this.props.onSetCountdown(parseInt(value, 10));
     }
 
-    handleSlider() {
-        this.props.sliderInput(parseInt(this.refs.seconds.value, 10));
+    handleSlider(value) {
+        this.props.sliderInput(parseInt(value, 10));
     }
 
     render() {
         return(
             <div>
-              <div>
-                <form ref="form" className="ttSliderForm">
-                    <input max="480" min="30" name="slider" onChange={this.handleSlider} ref="seconds" type="range" value={this.props.totalSeconds}/>
-                </form>
-              </div>
+                <div className="slider-container">
+                    <Slider
+                      ref="seconds"
+                      name="slider"
+                      min={30}
+                      max={360}
+                      step={30}
+                      value={this.props.totalSeconds}
+                      defaultValue={300}
+                      onChange={this.handleSlider}
+                    />
+                </div>
                 <div className="button-container slider-buttons">
                     <button className="button" onClick={() => {
                       this.handleButton(-30)
@@ -44,10 +54,10 @@ class Slider extends Component {
     }
 }
 
-Slider.propTypes = {
+MySlider.propTypes = {
     totalSeconds: React.PropTypes.number.isRequired,
     sliderInput: React.PropTypes.func.isRequired,
     onSetCountdown: React.PropTypes.func.isRequired
 };
 
-export default Slider;
+export default MySlider;

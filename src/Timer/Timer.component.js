@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Clock from './Clock.container';
 import StartStop from './StartStop.container';
-import Slider from './Slider.container';
+import MySlider from './Slider.container';
 
 class Timer extends Component {
   constructor(props) {
@@ -82,13 +82,13 @@ class Timer extends Component {
         return <StartStop countdownStatus={countdownStatus} onStatusChange={this.handleStatusChange}/>
       } else {
         return (<div>
-          <Slider onSetCountdown={this.handleSetCountdown} sliderInput={this.handleSliderInput}  totalSeconds={count}/>
+          <MySlider onSetCountdown={this.handleSetCountdown} sliderInput={this.handleSliderInput}  totalSeconds={count}/>
           <StartStop countdownStatus={countdownStatus} onStatusChange={this.handleStatusChange}/>
         </div>);
       }
     };
     return(
-      <div className="content-card">
+      <div className="content-card timer-card">
         <h1 className="title">Tea timer</h1>
         <Clock totalSeconds={count} status={countdownStatus}/>
         {renderStartStop()}
