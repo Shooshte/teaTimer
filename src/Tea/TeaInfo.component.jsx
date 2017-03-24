@@ -19,7 +19,6 @@ class TeaInfo extends Component {
           </div>
             <h3 className="title brew-time-title">Recommended brew time:</h3>
           <div className="brew-time-text-container">
-            {/*TODO link to timer route passing the time as a parameter*/}
             <button
               className="button brew-time-text"
               onClick={() => this.redirectToTimer(teaType.brewTime.mild * 60)}
