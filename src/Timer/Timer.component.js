@@ -21,9 +21,13 @@ class Timer extends Component {
   }
 
   componentDidMount() {
-    let seconds = parseInt(this.props.location.query.seconds, 10);
+    let seconds = 0;
 
-    if (seconds && seconds > 0) {
+    if(this.props.location.query.seconds) {
+     seconds = parseInt(this.props.location.query.seconds, 10);
+    }
+
+    if (seconds > 0) {
       this.setState({count:seconds});
       window.location.hash = '#/timer';
     }
