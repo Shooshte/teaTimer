@@ -34,7 +34,7 @@ class MySlider extends Component {
                       ref="seconds"
                       name="slider"
                       min={30}
-                      max={360}
+                      max={480}
                       step={30}
                       value={this.props.totalSeconds}
                       defaultValue={300}
