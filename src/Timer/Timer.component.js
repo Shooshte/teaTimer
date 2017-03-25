@@ -99,10 +99,11 @@ class Timer extends Component {
     if (this.state.countdownStatus !== 'stopped') {
       return <StartStop countdownStatus={this.state.countdownStatus} onStatusChange={this.handleStatusChange}/>
     } else {
-      return (<div>
-        <MySlider onSetCountdown={this.handleSetCountdown} sliderInput={this.handleSliderInput}  totalSeconds={this.state.count}/>
-        <StartStop countdownStatus={this.state.countdownStatus} onStatusChange={this.handleStatusChange}/>
-      </div>);
+      return (
+        <div>
+          <MySlider onSetCountdown={this.handleSetCountdown} sliderInput={this.handleSliderInput}  totalSeconds={this.state.count}/>
+          <StartStop countdownStatus={this.state.countdownStatus} onStatusChange={this.handleStatusChange}/>
+        </div>);
     }
   };
 
