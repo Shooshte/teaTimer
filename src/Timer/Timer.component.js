@@ -21,12 +21,16 @@ class Timer extends Component {
   }
 
   componentDidMount() {
+    // function for checking if an argument is a object
+    let isObj = (variable) => (variable !== null) && (typeof variable === 'object');
+    // function for checking if an object has a specific nested key
+    let objHasKey = (obj, key) => {
+      return isObj(obj) ? (key in obj) || Object.values(obj).filter(nestedObj => objHasKey(nestedObj, key)).length > 0 : false;
+    };
     let seconds = 0;
-
-    if(this.props.location.query.seconds) {
+    if(objHasKey(this.props, 'seconds')) {
      seconds = parseInt(this.props.location.query.seconds, 10);
     }
-
     if (seconds > 0) {
       this.setState({count:seconds});
       window.location.hash = '#/timer';
@@ -90,23 +94,24 @@ class Timer extends Component {
     this.setState({ countdownStatus: newStatus });
   }
 
+  // Renders Start or Stop button depending on countdownStatus
+  renderStartStop = () => {
+    if (this.state.countdownStatus !== 'stopped') {
+      return <StartStop countdownStatus={this.state.countdownStatus} onStatusChange={this.handleStatusChange}/>
+    } else {
+      return (<div>
+        <MySlider onSetCountdown={this.handleSetCountdown} sliderInput={this.handleSliderInput}  totalSeconds={this.state.count}/>
+        <StartStop countdownStatus={this.state.countdownStatus} onStatusChange={this.handleStatusChange}/>
+      </div>);
+    }
+  };
+
   render() {
-    let {count, countdownStatus} = this.state;
-    let renderStartStop = () => {
-      if (countdownStatus !== 'stopped') {
-        return <StartStop countdownStatus={countdownStatus} onStatusChange={this.handleStatusChange}/>
-      } else {
-        return (<div>
-          <MySlider onSetCountdown={this.handleSetCountdown} sliderInput={this.handleSliderInput}  totalSeconds={count}/>
-          <StartStop countdownStatus={countdownStatus} onStatusChange={this.handleStatusChange}/>
-        </div>);
-      }
-    };
     return(
       <div className="content-card timer-card">
         <h1 className="title">Tea timer</h1>
-        <Clock totalSeconds={count} status={countdownStatus}/>
-        {renderStartStop()}
+        <Clock totalSeconds={this.state.count} status={this.state.countdownStatus}/>
+        {this.renderStartStop()}
       </div>
     )
   }
