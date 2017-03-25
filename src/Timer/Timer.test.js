@@ -46,6 +46,18 @@ describe('<Timer/>', () => {
   });
 
   // Method tests
+  it('handleSliderinput should set state.count to passed value', () => {
+    const wrapper = shallow(<Timer/>);
+    wrapper.instance().handleSliderInput(9000);
+    expect(wrapper.state('count')).toBe(9000);
+  });
+  it('handleStatusChange should set state.countdownStatus to passed balue', () => {
+    const wrapper = shallow(<Timer/>);
+    wrapper.instance().handleStatusChange('whatever');
+    expect(wrapper.state('countdownStatus')).toBe('whatever');
+  });
+
+  // TODO renderStartStop, startTimer, componentDidMount, componentDidUpdate, componentWillUnmount
 
 });
 
