@@ -58,6 +58,5 @@ describe('<Timer/>', () => {
   });
 
   // TODO renderStartStop, startTimer, componentDidMount, componentDidUpdate, componentWillUnmount
-
 });
 
