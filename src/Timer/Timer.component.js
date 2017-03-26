@@ -27,6 +27,7 @@ class Timer extends Component {
     let objHasKey = (obj, key) => {
       return isObj(obj) ? (key in obj) || Object.values(obj).filter(nestedObj => objHasKey(nestedObj, key)).length > 0 : false;
     };
+
     let seconds = 0;
     if(objHasKey(this.props, 'seconds')) {
      seconds = parseInt(this.props.location.query.seconds, 10);
@@ -46,8 +47,8 @@ class Timer extends Component {
         case 'stopped':
           clearInterval(this.timer);
           delete this.timer;
-          //this.setState({count:180});
           break;
+        // if passed something else, stop the timer
         default:
       }
     }

@@ -51,12 +51,27 @@ describe('<Timer/>', () => {
     wrapper.instance().handleSliderInput(9000);
     expect(wrapper.state('count')).toBe(9000);
   });
-  it('handleStatusChange should set state.countdownStatus to passed balue', () => {
+  it('handleStatusChange should set state.countdownStatus to passed value', () => {
     const wrapper = shallow(<Timer/>);
     wrapper.instance().handleStatusChange('whatever');
     expect(wrapper.state('countdownStatus')).toBe('whatever');
   });
 
-  // TODO renderStartStop, startTimer, componentDidMount, componentDidUpdate, componentWillUnmount
+  it('call startTimer() when state.countdownStatus is changed to \'started\'', () => {
+    const wrapper = shallow(<Timer/>);
+    const spy = sinon.spy(wrapper.instance(), 'startTimer');
+    wrapper.instance().setState({countdownStatus: 'started'});
+    expect(spy.calledOnce).toBe(true);
+  });
+  it('should delete existing timer when state.countdownStatus is changed to \'stopped\'', () => {
+    const wrapper = shallow(<Timer/>);
+    const spy = sinon.spy(wrapper.instance(), 'startTimer');
+    wrapper.instance().setState({countdownStatus: 'started'});
+    wrapper.instance().setState({countdownStatus: 'stopped'});
+    expect(wrapper.instance().timer).toBe(undefined);
+  });
+
+  // TODO renderStartStop, startTimer
+
 });
 
