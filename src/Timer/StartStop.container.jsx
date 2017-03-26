@@ -13,7 +13,7 @@ class StartStop extends Component {
 
         let renderStartStopButton = () => {
             if(countdownStatus === 'started') {
-                return <button className="button" onClick={this.onStatusChange('stopped')}>RESET</button>;
+                return <button className="button" onClick={this.onStatusChange('stopped')}>STOP</button>;
             } else {
                 return <button className="button" onClick={this.onStatusChange('started')}>START</button>
             }
