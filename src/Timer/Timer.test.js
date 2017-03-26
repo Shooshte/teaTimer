@@ -56,7 +56,6 @@ describe('<Timer/>', () => {
     wrapper.instance().handleStatusChange('whatever');
     expect(wrapper.state('countdownStatus')).toBe('whatever');
   });
-
   it('call startTimer() when state.countdownStatus is changed to \'started\'', () => {
     const wrapper = shallow(<Timer/>);
     const spy = sinon.spy(wrapper.instance(), 'startTimer');
@@ -90,7 +89,6 @@ describe('<Timer/>', () => {
     jest.runTimersToTime(4000);
     expect(wrapper.state('count')).toBe(0);
   });
-
   it('render startStop should pass countdownStatus, onStatusChange to StartStop', () => {
     const wrapper = mount(<Timer/>);
     const renderStartStopReturn = wrapper.instance().renderStartStop();
@@ -110,4 +108,3 @@ describe('<Timer/>', () => {
     expect(renderStartStopReturn.props.children[0].props.sliderInput).toEqual(wrapper.instance().handleSliderInput);
   });
 });
-
