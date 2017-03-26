@@ -68,6 +68,7 @@
    -webkit-animation: dropsand 4s infinite ease-in-out;
 }
 
+/*TODO fix animation so it turns the clock before the sand starts falling*/
 
 /*.spinner-started {
   -webkit-animation: rotateplane 1.2s infinite ease-in-out;

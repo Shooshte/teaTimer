@@ -54,6 +54,8 @@ class MySlider extends Component {
     }
 }
 
+//TODO write unit test
+
 MySlider.propTypes = {
     totalSeconds: React.PropTypes.number.isRequired,
     sliderInput: React.PropTypes.func.isRequired,

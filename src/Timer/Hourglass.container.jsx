@@ -25,4 +25,6 @@ class Hourglass extends Component {
   }
 }
 
+//TODO write unit test
+
 export default Hourglass;
