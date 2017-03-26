@@ -63,15 +63,36 @@ describe('<Timer/>', () => {
     wrapper.instance().setState({countdownStatus: 'started'});
     expect(spy.calledOnce).toBe(true);
   });
-  it('should delete existing timer when state.countdownStatus is changed to \'stopped\'', () => {
+  it('delete existing timer when state.countdownStatus is changed to \'stopped\'', () => {
     const wrapper = shallow(<Timer/>);
     const spy = sinon.spy(wrapper.instance(), 'startTimer');
     wrapper.instance().setState({countdownStatus: 'started'});
     wrapper.instance().setState({countdownStatus: 'stopped'});
     expect(wrapper.instance().timer).toBe(undefined);
   });
+  it('startTimer should set a new timer', () => {
+    const wrapper = shallow(<Timer/>);
+    wrapper.instance().startTimer();
+    expect(wrapper.instance().timer).toBeDefined();
+  });
+  it('startTimer timer should lower count by 1 every second', () => {
+    jest.useFakeTimers();
+    const wrapper = shallow(<Timer/>);
+    wrapper.setState({count: 5});
+    wrapper.instance().startTimer();
+    jest.runTimersToTime(1000);
+    expect(wrapper.state('count')).toBe(4);
+  });
+  it('startTimer timer should not lower count below 0', () => {
+    jest.useFakeTimers();
+    const wrapper = shallow(<Timer/>);
+    wrapper.setState({count: 1});
+    wrapper.instance().startTimer();
+    jest.runTimersToTime(4000);
+    expect(wrapper.state('count')).toBe(0);
+  });
 
-  // TODO renderStartStop, startTimer
+  // TODO renderStartStop
 
 });
 
