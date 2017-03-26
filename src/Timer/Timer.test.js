@@ -4,6 +4,9 @@ import sinon from 'sinon';
 
 import Timer from './Timer.component';
 
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
+
+
 describe('<Timer/>', () => {
   // Render
   it('render .timer-card', () => {
