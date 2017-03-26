@@ -4,9 +4,6 @@ import sinon from 'sinon';
 
 import Timer from './Timer.component';
 
-jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
-
-
 describe('<Timer/>', () => {
   // Render
   it('render .timer-card', () => {
@@ -68,7 +65,6 @@ describe('<Timer/>', () => {
   });
   it('delete existing timer when state.countdownStatus is changed to \'stopped\'', () => {
     const wrapper = shallow(<Timer/>);
-    const spy = sinon.spy(wrapper.instance(), 'startTimer');
     wrapper.instance().setState({countdownStatus: 'started'});
     wrapper.instance().setState({countdownStatus: 'stopped'});
     expect(wrapper.instance().timer).toBe(undefined);
@@ -95,7 +91,23 @@ describe('<Timer/>', () => {
     expect(wrapper.state('count')).toBe(0);
   });
 
-  // TODO renderStartStop
-
+  it('render startStop should pass countdownStatus, onStatusChange to StartStop', () => {
+    const wrapper = mount(<Timer/>);
+    const renderStartStopReturn = wrapper.instance().renderStartStop();
+    expect(renderStartStopReturn.props.children[1].props.onStatusChange).toEqual(wrapper.instance().handleStatusChange);
+    expect(renderStartStopReturn.props.children[1].props.countdownStatus).toEqual(wrapper.state('countdownStatus'));
+  });
+  it('render startStop should not return MySlider when state is not \'stopped\'', () => {
+    const wrapper = shallow(<Timer/>);
+    wrapper.instance().setState({countdownStatus: 'whatever'});
+    expect(wrapper.find('MySlider').length).toBe(0);
+  });
+  it('render startStop should return MySlider passing onSetCountdown, sliderInput when state is \'stopped\'', () => {
+    const wrapper = mount(<Timer/>);
+    wrapper.instance().setState({countdownStatus : 'stopped'});
+    const renderStartStopReturn = wrapper.instance().renderStartStop();
+    expect(renderStartStopReturn.props.children[0].props.onSetCountdown).toEqual(wrapper.instance().handleSetCountdown);
+    expect(renderStartStopReturn.props.children[0].props.sliderInput).toEqual(wrapper.instance().handleSliderInput);
+  });
 });
 
