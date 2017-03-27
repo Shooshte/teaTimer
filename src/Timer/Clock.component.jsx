@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Hourglass from './Hourglass.container';
+import Hourglass from './Hourglass.component';
 
 import './Clock.css';
 

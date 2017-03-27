@@ -1,8 +1,8 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
 
-import Clock from './Clock.container';
-import Hourglass from './Hourglass.container';
+import Clock from './Clock.component';
+import Hourglass from './Hourglass.component';
 
 describe('<Clock/>', () => {
   it('render .clock-container', () => {

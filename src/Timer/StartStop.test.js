@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
 
-import StartStop from './StartStop.container';
+import StartStop from './StartStop.component';
 
 describe('<StartStop/>', () => {
   it('render .button-container', () => {

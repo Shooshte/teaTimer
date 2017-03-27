@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow, mount} from 'enzyme';
 import sinon from 'sinon';
 
-import Navbar from './Navbar';
+import Navbar from './Navbar.component';
 
 const mockLinksData = [
   {

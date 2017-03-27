@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import Clock from './Clock.container';
-import StartStop from './StartStop.container';
-import MySlider from './Slider.container';
+import Clock from './Clock.component';
+import StartStop from './StartStop.component';
+import MySlider from './MySlider.component';
 
 import './Timer.css';
 

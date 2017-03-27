@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 
-import Hourglass from './Hourglass.container';
+import Hourglass from './Hourglass.component';
 
 describe('<Hourglass/>', () => {
   it('render .spinner-started when passe status \'started\'', () => {

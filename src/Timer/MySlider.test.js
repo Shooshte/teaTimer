@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
 
-import MySlider from './Slider.container';
+import MySlider from './MySlider.component';
 import Slider from 'rc-slider';
 
 describe('<MySlider/>', () => {
