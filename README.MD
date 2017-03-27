@@ -1,20 +1,23 @@
-#teaTimer
+# teaTimer
 
 A react tea timer app build after finishing a udemy React course to re-visit the learned concepts.
 
 You can find a working demo here:
 https://shooshte.github.io/teaTimer/
 
-#scripts
-* npm start
-* npm run test
-* npm run build
-* npm run deploy
+# scripts
+`npm start`
 
-#contributing
+`npm run test`
+
+`npm run build`
+
+`npm run deploy`
+
+# contributing
 If you want to contribute please open a gitHub issue, or create your own dev branch.
 
-#licence - MIT
+# licence - MIT
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
