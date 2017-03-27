@@ -46,15 +46,13 @@ class MySlider extends Component {
                       this.handleButton(-30)
                     }}>-</button>
                     <button className="button" onClick={() => {
-                        this.handleButton(+30)
+                        this.handleButton(30)
                     }}>+</button>
                 </div>
             </div>
         )
     }
 }
-
-//TODO write unit test
 
 MySlider.propTypes = {
     totalSeconds: React.PropTypes.number.isRequired,
