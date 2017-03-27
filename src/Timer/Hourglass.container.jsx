@@ -17,14 +17,16 @@ class Hourglass extends Component {
       else if(status === 'stopped') {
         return(
           <div>
-            <div className="spinner">
-              <div className="sand"></div>
+            <div className="spinner spinner-stopped">
+              <div className="sand sand-stopped"></div>
             </div>
           </div>)
       }
   }
 }
 
-//TODO write unit test
+Hourglass.propTypes = {
+  status: React.PropTypes.string.isRequired
+};
 
 export default Hourglass;
