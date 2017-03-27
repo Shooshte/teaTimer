@@ -87,5 +87,6 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  }
+  },
+  "homepage": "https://github.com/Shooshte/teaTimer.git"
 }
