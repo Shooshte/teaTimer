@@ -22,13 +22,13 @@ const TeaInfo = ({teaData}) => {
             <div className="brew-time-text-container">
               <button
                 className="button brew-time-text"
-                onClick={redirectToTimer(teaType.brewTime.mild * 60)}
+                onClick={() => redirectToTimer(teaType.brewTime.mild * 60)}
               >
                 Mild: {teaType.brewTime.mild}&nbsp;min.
               </button>
               <button
                 className="button brew-time-text"
-                onClick={redirectToTimer(teaType.brewTime.strong * 60)}
+                onClick={() => redirectToTimer(teaType.brewTime.strong * 60)}
               >
                 Strong: {teaType.brewTime.strong}&nbsp;min.
               </button>
