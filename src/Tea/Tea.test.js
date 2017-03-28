@@ -1,6 +1,5 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
-import sinon from 'sinon';
 
 import Tea from './Tea.component';
 import TeaData from './Tea.data';
