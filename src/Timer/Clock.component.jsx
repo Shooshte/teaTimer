@@ -14,7 +14,7 @@ const Clock = ({status, totalSeconds}) => {
           minutes = '0' + minutes;
         }
         return minutes + ':' + seconds;
-    }
+    };
 
     return(
       <div className="clock-container">
@@ -29,7 +29,7 @@ const Clock = ({status, totalSeconds}) => {
       </div>
     )
 
-}
+};
 
 Clock.propTypes = {
     totalSeconds: React.PropTypes.number.isRequired,
