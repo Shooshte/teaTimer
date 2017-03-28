@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link, IndexLink} from 'react-router';
+import {Link} from 'react-router';
 
 import './navbar.css'
 
@@ -13,7 +13,7 @@ class Navbar extends Component {
             <div className="navbar-link-container" key={linkData.to}>
               <Link
               activeClassName="navbar-active-link"
-              {linkData.to === '/' ? onlyActiveOnIndex={true} : null}
+              onlyActiveOnIndex={linkData.to === '/' ? true : false}
               to={linkData.to}>
                 <i className="navbar-icon material-icons">{linkData.icon}</i>
                 <span className="navbar-link-text">{linkData.text}</span>
