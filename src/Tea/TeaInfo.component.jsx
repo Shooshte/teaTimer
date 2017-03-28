@@ -2,12 +2,12 @@ import React from 'react';
 
 import './TeaInfo.css';
 
-const TeaInfo = ({teaData}) => {
+const redirectToTimer = (seconds) => {
+  let encodedSeconds = encodeURIComponent(seconds);
+  window.location.hash = '#/timer?seconds=' + encodedSeconds;
+};
 
-  const redirectToTimer = (seconds) => {
-    let encodedSeconds = encodeURIComponent(seconds);
-    window.location.hash = '#/timer?seconds=' + encodedSeconds;
-  };
+const TeaInfo = ({teaData}) => {
 
   return(
     <div className="view-content tea-info">
