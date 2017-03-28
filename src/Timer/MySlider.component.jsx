@@ -8,24 +8,19 @@ import './Slider.css';
 class MySlider extends Component {
     constructor(props) {
         super(props);
-
         this.handleChange = this.handleChange.bind(this);
         this.handleButton = this.handleButton.bind(this);
         this.handleSlider = this.handleSlider.bind(this);
     }
-
     handleChange() {
         this.props.onSetCountdown(parseInt(this.refs.seconds.value, 10));
     }
-
     handleButton(value) {
         this.props.onSetCountdown(parseInt(value, 10));
     }
-
     handleSlider(value) {
         this.props.sliderInput(parseInt(value, 10));
     }
-
     render() {
         return(
             <div>

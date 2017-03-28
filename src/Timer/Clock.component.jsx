@@ -1,42 +1,34 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Hourglass from './Hourglass.component';
 
 import './Clock.css';
 
-class Clock extends Component {
-    formatSeconds(totalSeconds) {
+const Clock = ({status, totalSeconds}) => {
+    const formatSeconds = (totalSeconds) => {
         let seconds = totalSeconds % 60;
         let minutes = Math.floor(totalSeconds / 60);
         if(seconds < 10) {
-            seconds = '0' + seconds;
+          seconds = '0' + seconds;
         }
         if(minutes < 10) {
-            minutes = '0' + minutes;
+          minutes = '0' + minutes;
         }
         return minutes + ':' + seconds;
     }
 
-    renderHourglass() {
-            return (
-                <div className="hourglass-container">
-                    <Hourglass status={this.props.status}/>
-                </div>
-            );
-    }
+    return(
+      <div className="clock-container">
+          <div className="hourglass-container">
+              <Hourglass status={status}/>
+          </div>
+          <div>
+            <span className="clock-text title">
+                {formatSeconds(totalSeconds)}
+            </span>
+          </div>
+      </div>
+    )
 
-    render() {
-        let {totalSeconds} = this.props;
-        return(
-            <div className="clock-container">
-                {this.renderHourglass()}
-                <div>
-                    <span className="clock-text title">
-                        {this.formatSeconds(totalSeconds)}
-                    </span>
-                </div>
-            </div>
-        )
-    }
 }
 
 Clock.propTypes = {

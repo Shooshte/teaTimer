@@ -1,27 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import './Hourglass.css';
 
-class Hourglass extends Component {
-
-  render() {
-    let {status} = this.props;
-      if(status === 'started') {
-        return(
-          <div>
-            <div className="spinner spinner-started">
-              <div className="sand sand-started"></div>
-            </div>
-          </div>)
-      }
-      else if(status === 'stopped') {
-        return(
-          <div>
-            <div className="spinner spinner-stopped">
-              <div className="sand sand-stopped"></div>
-            </div>
-          </div>)
-      }
+const Hourglass = ({status}) => {
+  if(status === 'started') {
+    return(
+      <div>
+        <div className="spinner spinner-started">
+          <div className="sand sand-started"></div>
+        </div>
+      </div>)
+  }
+  else if(status === 'stopped') {
+    return(
+      <div>
+        <div className="spinner spinner-stopped">
+          <div className="sand sand-stopped"></div>
+        </div>
+      </div>)
   }
 }
 

@@ -77,35 +77,4 @@ describe('<TeaInfo/>', () => {
     expect(wrapper.find('.text').at(0).text()).toMatch(mockTeaData[0].text[0]);
     expect(wrapper.find('.text').at(1).text()).toMatch(mockTeaData[0].text[1]);
   });
-
-  //Component load test
-  it('call renderTeaInfo on component load', () => {
-    const wrapper = mount(<TeaInfo teaData={TeaData}/>);
-    let spy = sinon.spy(wrapper.instance(), 'renderTeaInfo');
-    wrapper.update();
-    expect(spy.calledOnce).toBe(true);
-  });
-
-  //Method tests
-  it('renderTeaInfo should return an array', () => {
-    const wrapper = shallow(<TeaInfo teaData={TeaData}/>);
-    const functReturn = wrapper.instance().renderTeaInfo(TeaData);
-    expect(functReturn.constructor === Array).toBe(true);
-  })
-  it('renderTeaInfo should call renderTeaText', () => {
-    const wrapper = mount(<TeaInfo teaData={TeaData}/>);
-    let spy = sinon.spy(wrapper.instance(), 'renderTeaText');
-    wrapper.update();
-    expect(spy.called).toBe(true);
-  });
-  it('renderTeaText should return an array', () => {
-    const wrapper = shallow(<TeaInfo teaData={TeaData}/>);
-    const functReturn = wrapper.instance().renderTeaText(TeaData[0].text);
-    expect(functReturn.constructor === Array).toBe(true);
-  });
-  it('renderTeaText should return an array element for every text string', () => {
-    const wrapper = shallow(<TeaInfo teaData={TeaData}/>);
-    const functReturn = wrapper.instance().renderTeaText(TeaData[0].text);
-    expect(functReturn.length).toBe(TeaData[0].text.length);
-  });
 });

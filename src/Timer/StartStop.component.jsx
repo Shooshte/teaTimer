@@ -1,30 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class StartStop extends Component {
+const StartStop = ({onStatusChange, countdownStatus}) => {
 
-    onStatusChange(newStatus) {
-        return () => {
-            this.props.onStatusChange(newStatus);
-        }
-    }
-
-    render() {
-        let {countdownStatus} = this.props;
-
-        let renderStartStopButton = () => {
-            if(countdownStatus === 'started') {
-                return <button className="button" onClick={this.onStatusChange('stopped')}>STOP</button>;
-            } else {
-                return <button className="button" onClick={this.onStatusChange('started')}>START</button>
-            }
-        };
-
-        return(
-            <div className="button-container">
-                {renderStartStopButton()}
-            </div>
-        )
-    }
+    return(
+      <div className="button-container">
+        {countdownStatus === 'started' ?  <button className="button" onClick={() => onStatusChange('stopped')}>STOP</button> : <button className="button" onClick={() => onStatusChange('started')}>START</button>}
+      </div>
+    )
 }
 
 StartStop.propTypes = {

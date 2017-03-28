@@ -19,13 +19,7 @@ describe('<Clock/>', () => {
   });
   it('formatSeconds should return a string with the properly formatted time', () => {
     const wrapper = shallow(<Clock totalSeconds={180} status="started"/>);
-    const formatSecondsReturn = wrapper.instance().formatSeconds(180);
-    expect(formatSecondsReturn).toBe('03:00');
-  });
-  it('renderHourglass should return Hourglass passing this.props.state', () => {
-    const wrapper = shallow(<Clock totalSeconds={180} status="started"/>);
-    const renderHourglassReturn = wrapper.instance().renderHourglass();
-    expect(renderHourglassReturn.props.children).toEqual(<Hourglass status="started"/>);
+    expect(wrapper.find('.clock-text').text()).toBe('03:00');
   });
   it('set default props totalSeconds: 0, status: \'stopped\'', () => {
     const wrapper = mount(<Clock/>);
