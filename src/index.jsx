@@ -4,7 +4,7 @@ import {hashHistory, Router, Route, IndexRoute} from 'react-router';
 
 import './reset.css';
 
-import Main from './Main.component';
+import Main from './Main/Main.component';
 import Tea from './Tea/Tea.component';
 import About from './About/About.component';
 import Timer from './Timer/Timer.component';
