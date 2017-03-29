@@ -1,9 +1,11 @@
+// @flow
+
 import React from 'react';
 
 import './Hourglass.css';
 
-const Hourglass = ({status}) => {
-  if(status === 'started') {
+const Hourglass = (props: {status : string}) => {
+  if(props.status === 'started') {
     return(
       <div>
         <div className="spinner spinner-started">
@@ -11,7 +13,7 @@ const Hourglass = ({status}) => {
         </div>
       </div>)
   }
-  else if(status === 'stopped') {
+  else if(props.status === 'stopped') {
     return(
       <div>
         <div className="spinner spinner-stopped">
@@ -19,10 +21,6 @@ const Hourglass = ({status}) => {
         </div>
       </div>)
   }
-}
-
-Hourglass.propTypes = {
-  status: React.PropTypes.string.isRequired
 };
 
 export default Hourglass;

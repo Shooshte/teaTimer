@@ -1,12 +1,14 @@
+// @flow
+
 import React from 'react';
 import {Link} from 'react-router';
 
 import './navbar.css'
 
-const Navbar = ({linksData}) => {
+const Navbar = (props: {linksData: Array<any>}) => {
   return (
-    <div className={`navbar navbar-${linksData.length}`}>
-      {linksData.map((linkData) => {
+    <div className={`navbar navbar-${props.linksData.length}`}>
+      {props.linksData.map((linkData) => {
         return(
           <div className="navbar-link-container" key={linkData.to}>
             <Link
@@ -21,10 +23,6 @@ const Navbar = ({linksData}) => {
       })}
     </div>
   )
-}
-
-Navbar.propTypes = {
-  linksData: React.PropTypes.array.isRequired,
 };
 
 export default Navbar;

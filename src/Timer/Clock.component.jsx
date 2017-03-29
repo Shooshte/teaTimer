@@ -1,9 +1,11 @@
+// @flow
+
 import React from 'react';
 import Hourglass from './Hourglass.component';
 
 import './Clock.css';
 
-const formatSeconds = (totalSeconds) => {
+const formatSeconds = (totalSeconds: number) => {
   let seconds = totalSeconds % 60;
   let minutes = Math.floor(totalSeconds / 60);
   if(seconds < 10) {
@@ -15,25 +17,20 @@ const formatSeconds = (totalSeconds) => {
   return minutes + ':' + seconds;
 };
 
-const Clock = ({status, totalSeconds}) => {
+const Clock = (props: {status: string, totalSeconds: number}) => {
     return(
       <div className="clock-container">
           <div className="hourglass-container">
-              <Hourglass status={status}/>
+              <Hourglass status={props.status}/>
           </div>
           <div>
             <span className="clock-text title">
-                {formatSeconds(totalSeconds)}
+                {formatSeconds(props.totalSeconds)}
             </span>
           </div>
       </div>
     )
 
-};
-
-Clock.propTypes = {
-    totalSeconds: React.PropTypes.number.isRequired,
-    status: React.PropTypes.string.isRequired
 };
 
 Clock.defaultProps = {

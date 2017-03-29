@@ -1,17 +1,20 @@
+// @flow
+
 import React from 'react';
 
 import './TeaInfo.css';
 
-const redirectToTimer = (seconds) => {
-  let encodedSeconds = encodeURIComponent(seconds);
+const redirectToTimer = (seconds: number) => {
+  let secondsString = seconds.toString();
+  let encodedSeconds = encodeURIComponent(secondsString);
   window.location.hash = '#/timer?seconds=' + encodedSeconds;
 };
 
-const TeaInfo = ({teaData}) => {
+const TeaInfo = (props: {teaData: Array<any>}) => {
 
   return(
     <div className="view-content tea-info">
-      {teaData.map((teaType) => {
+      {props.teaData.map((teaType) => {
         return (
           <div className="content-card" key={teaType.id}>
             <div className="tea-image-container">
@@ -42,10 +45,6 @@ const TeaInfo = ({teaData}) => {
     </div>
   )
 
-};
-
-TeaInfo.propTypes = {
-  teaData: React.PropTypes.array.isRequired
 };
 
 export default TeaInfo;

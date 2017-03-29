@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 
 import './main.css';
@@ -21,19 +23,16 @@ const linksData = [
   }
 ];
 
-const Main = ({children}) => {
+const Main = (props: {children: Object}) => {
   return(
     <div>
       <Navbar linksData={linksData}/>
       <div className="content-container">
-        {children}
+        {props.children}
       </div>
     </div>
   )
-}
-
-Main.propTypes = {
-  children: React.PropTypes.object
 };
+
 
 export default Main;
