@@ -1,3 +1,5 @@
+// @flow
+
 import React, {Component} from 'react';
 
 import Slider from 'rc-slider';
@@ -6,19 +8,19 @@ import 'rc-slider/assets/index.css';
 import './Slider.css';
 
 class MySlider extends Component {
-    constructor(props) {
-        super(props);
-        this.handleChange = this.handleChange.bind(this);
-        this.handleButton = this.handleButton.bind(this);
-        this.handleSlider = this.handleSlider.bind(this);
-    }
+    props: {
+        totalSeconds: number,
+        sliderInput: Function,
+        onSetCountdown: Function
+    };
+
     handleChange() {
         this.props.onSetCountdown(parseInt(this.refs.seconds.value, 10));
     }
-    handleButton(value) {
+    handleButton(value : number) {
         this.props.onSetCountdown(parseInt(value, 10));
     }
-    handleSlider(value) {
+    handleSlider(value : number) {
         this.props.sliderInput(parseInt(value, 10));
     }
     render() {
@@ -48,11 +50,5 @@ class MySlider extends Component {
         )
     }
 }
-
-MySlider.propTypes = {
-    totalSeconds: React.PropTypes.number.isRequired,
-    sliderInput: React.PropTypes.func.isRequired,
-    onSetCountdown: React.PropTypes.func.isRequired
-};
 
 export default MySlider;

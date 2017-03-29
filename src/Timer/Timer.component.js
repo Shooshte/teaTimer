@@ -95,25 +95,18 @@ class Timer extends Component {
     this.setState({ countdownStatus: newStatus });
   }
 
-  // Renders Start or Stop button depending on countdownStatus
-  renderStartStop = () => {
-    if (this.state.countdownStatus !== 'stopped') {
-      return <StartStop countdownStatus={this.state.countdownStatus} onStatusChange={this.handleStatusChange}/>
-    } else {
-      return (
-        <div>
-          <MySlider onSetCountdown={this.handleSetCountdown} sliderInput={this.handleSliderInput}  totalSeconds={this.state.count}/>
-          <StartStop countdownStatus={this.state.countdownStatus} onStatusChange={this.handleStatusChange}/>
-        </div>);
-    }
-  };
-
   render() {
     return(
       <div className="content-card timer-card">
         <h1 className="title">Tea timer</h1>
         <Clock totalSeconds={this.state.count} status={this.state.countdownStatus}/>
-        {this.renderStartStop()}
+        {this.state.countdownStatus !== 'stopped' ?
+          <StartStop countdownStatus={this.state.countdownStatus} onStatusChange={this.handleStatusChange}/>
+          :
+          <div>
+            <MySlider onSetCountdown={this.handleSetCountdown} sliderInput={this.handleSliderInput}  totalSeconds={this.state.count}/>
+            <StartStop countdownStatus={this.state.countdownStatus} onStatusChange={this.handleStatusChange}/>
+          </div>}
       </div>
     )
   }

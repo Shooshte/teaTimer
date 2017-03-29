@@ -20,7 +20,7 @@ describe('<Timer/>', () => {
     const status = wrapper.state('countdownStatus');
     expect(wrapper.find('Clock').prop('status')).toEqual(status);
   });
-  it('set this.props.location.query.seconds as state.count when passed value < 480', () => {
+  it('set this.props.location.query.seconds as state.count when passed value', () => {
     const mockUrl = {
       query : {
         seconds: '250'
@@ -28,21 +28,6 @@ describe('<Timer/>', () => {
     };
     const wrapper = mount(<Timer location={mockUrl}/>);
     expect(wrapper.state('count')).toEqual(250);
-  });
-  it('set state.count to 480 when passed this.props.location.query.seconds > 480', () => {
-    const mockUrl = {
-      query : {
-        seconds: '1000'
-      }
-    };
-    const wrapper = mount(<Timer location={mockUrl}/>);
-    expect(wrapper.state('count')).toEqual(480);
-  });
-  it('call renderStartStop on render', () => {
-    const wrapper = mount(<Timer/>);
-    let spy = sinon.spy(wrapper.instance(), 'renderStartStop');
-    wrapper.update();
-    expect(spy.calledOnce).toBe(true);
   });
 
   // Method tests
@@ -88,23 +73,5 @@ describe('<Timer/>', () => {
     wrapper.instance().startTimer();
     jest.runTimersToTime(4000);
     expect(wrapper.state('count')).toBe(0);
-  });
-  it('render startStop should pass countdownStatus, onStatusChange to StartStop', () => {
-    const wrapper = mount(<Timer/>);
-    const renderStartStopReturn = wrapper.instance().renderStartStop();
-    expect(renderStartStopReturn.props.children[1].props.onStatusChange).toEqual(wrapper.instance().handleStatusChange);
-    expect(renderStartStopReturn.props.children[1].props.countdownStatus).toEqual(wrapper.state('countdownStatus'));
-  });
-  it('render startStop should not return MySlider when state is not \'stopped\'', () => {
-    const wrapper = shallow(<Timer/>);
-    wrapper.instance().setState({countdownStatus: 'whatever'});
-    expect(wrapper.find('MySlider').length).toBe(0);
-  });
-  it('render startStop should return MySlider passing onSetCountdown, sliderInput when state is \'stopped\'', () => {
-    const wrapper = mount(<Timer/>);
-    wrapper.instance().setState({countdownStatus : 'stopped'});
-    const renderStartStopReturn = wrapper.instance().renderStartStop();
-    expect(renderStartStopReturn.props.children[0].props.onSetCountdown).toEqual(wrapper.instance().handleSetCountdown);
-    expect(renderStartStopReturn.props.children[0].props.sliderInput).toEqual(wrapper.instance().handleSliderInput);
   });
 });
