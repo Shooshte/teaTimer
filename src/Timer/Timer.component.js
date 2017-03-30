@@ -1,3 +1,5 @@
+// TODO flow
+
 import React, { Component } from 'react';
 
 import Clock from './Clock.component';
