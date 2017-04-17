@@ -1,6 +1,7 @@
 // TODO flow
 
 import React, { Component } from 'react';
+import { inject, observer } from "mobx-react";
 
 import Clock from './Clock.component';
 import StartStop from './StartStop.component';
@@ -8,6 +9,8 @@ import MySlider from './MySlider.component';
 
 import './Timer.css';
 
+@inject("timerStore")
+@observer
 class Timer extends Component {
   constructor(props) {
     super(props);
@@ -98,6 +101,7 @@ class Timer extends Component {
   }
 
   render() {
+
     return(
       <div className="content-card timer-card">
         <h1 className="title">Tea timer</h1>

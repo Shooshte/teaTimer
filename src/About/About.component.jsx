@@ -10,7 +10,7 @@ const About = () => {
       </div>
       <div className="content-card">
         <h1 className="title">Technology</h1>
-        <p className="text">The app is bootstrapped using <a href="https://github.com/facebookincubator/create-react-app" target="_blank">create-react app</a>. It is build with ReactJS, and uses <a href="https://github.com/react-component/slider" target="_blank">rc-slider</a>. Unit testing is integrated using Enzyme and Jest. The design is build upon Google Material Design guidelines.</p>
+        <p className="text">The app is bootstrapped using <a href="https://github.com/facebookincubator/create-react-app" target="_blank">create-react app</a>. It is build with ReactJS, Mobx and uses <a href="https://github.com/react-component/slider" target="_blank">rc-slider</a>. Unit testing is integrated using Enzyme and Jest. The design is build upon Google Material Design guidelines.</p>
         <p className="text">The app is hosted on gitHub pages.</p>
       </div>
       <div className="content-card">
