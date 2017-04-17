@@ -27,13 +27,13 @@ const TeaInfo = (props: {teaData: Array<any>}) => {
                 className="button brew-time-text"
                 onClick={() => redirectToTimer(teaType.brewTime.mild * 60)}
               >
-                Mild: {teaType.brewTime.mild}&nbsp;min.
+                MILD: {teaType.brewTime.mild}&nbsp;MIN.
               </button>
               <button
                 className="button brew-time-text"
                 onClick={() => redirectToTimer(teaType.brewTime.strong * 60)}
               >
-                Strong: {teaType.brewTime.strong}&nbsp;min.
+                STRONG: {teaType.brewTime.strong}&nbsp;MIN.
               </button>
             </div>
             <div className="tea-text-container">

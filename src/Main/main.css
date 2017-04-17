@@ -31,14 +31,12 @@ body {
 
 .title {
   font-size: 24px;
-  font-weight: 700;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto', 'Noto Sans', sans-serif;
 }
 
 .subtitle {
   font-size: 19px;
-  font-weight: 700;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto', 'Noto Sans', sans-serif;
 }
 
 .text a {
