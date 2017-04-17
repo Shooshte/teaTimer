@@ -3,10 +3,16 @@ import {observable, action, computed} from 'mobx'
 export default class TimerStore {
     @observable count = 300
     @observable started = false
-    @observable message = 'THIS IS FROM THE STORE'
+
+    @observable modalOpen = true
+    @observable modalHeading = 'Placeholder heading'
 
     @action setCount(seconds) {
         this.count = seconds;
+    }
+
+    @action closeModal() {
+        this.modalOpen = false
     }
 
     @computed get TimeString() {

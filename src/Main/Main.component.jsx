@@ -4,6 +4,7 @@ import React from 'react';
 
 import './main.css';
 import Navbar from './Navbar.component';
+import Modal from '../Modal/Modal.component';
 
 const linksData = [
   {
@@ -27,6 +28,7 @@ const Main = (props: {children: Object}) => {
   return(
     <div>
       <Navbar linksData={linksData}/>
+      <Modal/>
       <div className="content-container">
         {props.children}
       </div>
